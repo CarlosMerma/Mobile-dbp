@@ -42,8 +42,10 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
             int whoSent = message.getInt("user_from_id");
             if (whoSent == loggedUserId){
                 holder.myLine.setText(content);
+                holder.myLine.setPadding(30,20,30,20);
             } else {
                 holder.friendLine.setText(content);
+                holder.friendLine.setPadding(30,20,30,20);
             }
         } catch (JSONException e) {
             e.printStackTrace();
